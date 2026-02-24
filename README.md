@@ -41,11 +41,11 @@ El conjunto de datos (`X`, `y`) se dividió en conjuntos de entrenamiento y prue
 Durante el proceso de EDA, se realizaron diversas visualizaciones para comprender la distribución de los datos y las relaciones entre las variables, especialmente en relación con la variable objetivo `Churn`:
 
 - **Matriz de Correlación:** Se generó un mapa de calor (`sns.heatmap`) para visualizar la correlación entre todas las variables, incluyendo la variable `Churn` (celda `vlc6hMDyjN2A`). Esto permitió identificar rápidamente las variables más y menos correlacionadas con el abandono de clientes.
-- **Boxplots de Tiempo de Contrato vs. Cancelación:** Se utilizaron diagramas de caja (`sns.boxplot`) para comparar la distribución del tiempo de contrato (`customer.tenure`) y los cargos totales (`account.Charges.Total`) entre los clientes que cancelan y los que no (celdas `gY9jzSi7lVbb` y `BR5vCWMnPNH9`). Estos gráficos mostraron que los clientes con menor tiempo de contrato y menores cargos totales son más propensos a cancelar.
-- **Scatter Plot de Gasto Total vs. Cancelación:** Un diagrama de dispersión (`sns.scatterplot`) visualizó la relación entre `customer.tenure` y `account.Charges.Total`, coloreando los puntos segùn el estado de `Churn` (celda `5Blt-r5QQBR6`). Este gráfico reforzó la idea de que los clientes de corta duración y bajo gasto son un segmento vulnerable.
+- **Boxplots de Tiempo de Contrato vs. Cancelación:** Se utilizaron diagramas de caja (`sns.boxplot`) para comparar la distribución del tiempo de contrato (`customer.tenure`) y los cargos totales (`account.Charges.Total`) entre los clientes que cancelan y los que no. Estos gráficos mostraron que los clientes con menor tiempo de contrato y menores cargos totales son más propensos a cancelar.
+- **Scatter Plot de Gasto Total vs. Cancelación:** Un diagrama de dispersión (`sns.scatterplot`) visualizó la relación entre `customer.tenure` y `account.Charges.Total`, coloreando los puntos segùn el estado de `Churn`. Este gráfico reforzó la idea de que los clientes de corta duración y bajo gasto son un segmento vulnerable.
 
 ### Insights Clave del EDA:
-Los principales factores identificados que influyen en la probabilidad de abandono, basados en la correlación y el análisis exploratorio (detallados en la celda de texto `c01ce4fb`), incluyen:
+Los principales factores identificados que influyen en la probabilidad de abandono, basados en la correlación y el análisis exploratorio, incluyen:
 
 1.  **Tipo de Contrato (Month-to-month contract):** Alta correlación positiva. Los clientes con contratos mensuales tienen una propensión significativamente mayor a cancelar.
 2.  **Tiempo de Tenencia (`customer.tenure`):** Fuerte correlación negativa. Los clientes con menor tenencia son más propensos a cancelar.
@@ -122,12 +122,6 @@ A continuación, se presentan estrategias de retención de clientes directamente
 Para ejecutar el cuaderno `Analisis_Churn.ipynb`, asegùrate de tener las siguientes bibliotecas instaladas y de colocar el archivo de datos correctamente.
 
 ### Bibliotecas Requeridas
-
-Puedes instalar todas las bibliotecas necesarias utilizando `pip`:
-
-```bash
-pip install pandas numpy matplotlib seaborn plotly scikit-learn
-```
 
 Las bibliotecas principales utilizadas en el cuaderno son:
 - `pandas`
